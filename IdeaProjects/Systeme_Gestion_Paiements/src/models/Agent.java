@@ -13,6 +13,9 @@ public class Agent extends Personne {
         this.typeAgent = typeAgent;
     }
 
+    public Agent() {
+    }
+
 
     public int getIdAgent() { return idAgent; }
     public void setIdAgent(int idAgent) { this.idAgent = idAgent; }
@@ -23,7 +26,5 @@ public class Agent extends Personne {
     public Departement getDepartement() { return departement; }
     public void setDepartement(Departement departement) { this.departement = departement; }
 
-    public String getMotDePasse() {
-        return super.getMotDePasse();
-    }
+
 }

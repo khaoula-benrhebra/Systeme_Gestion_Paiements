@@ -12,21 +12,11 @@ public class DBConnection {
 
     private DBConnection() {}
 
-//    public static Connection getConnection() {
-//        if (instance == null) {
-//            try {
-//                instance = DriverManager.getConnection(URL, USER, PASS);
-//                System.out.println(" Connexion à la base de données réussie !");
-//            } catch (SQLException e) {
-//                System.err.println(" Erreur de connexion à la base de données: " + e.getMessage());
-//                e.printStackTrace();
-//            }
-//        }
-//        return instance;
-//    }
 
 
     public static Connection getConnection() {
+        if(instance!=null)
+            return instance;
         try {
             Connection connection = DriverManager.getConnection(URL, USER, PASS);
             return connection;

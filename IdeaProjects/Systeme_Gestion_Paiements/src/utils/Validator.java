@@ -25,4 +25,10 @@ public class Validator {
             throw new IllegalArgumentException(fieldName + " ne peut pas être vide");
         }
     }
+
+    public static void validateMontant(double montant) {
+        if (montant <= 0) {
+            throw new IllegalArgumentException("Le montant doit être positif");
+        }
+    }
 }

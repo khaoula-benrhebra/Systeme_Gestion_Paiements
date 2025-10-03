@@ -10,4 +10,5 @@ public interface AgentDAO {
     List<Agent> findAll();
     void update(Agent agent);
     void delete(int idAgent);
+    void affecterDepartement(int idAgent, int idDepartement);
 }
